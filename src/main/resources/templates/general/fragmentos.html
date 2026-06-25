@@ -8,14 +8,89 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     xmlns:th="http://www.thymeleaf.org"      
     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
     <head th:fragment="head">
-        <title>Inicio - Outlet Surf Skate</title>
+        <title>PowerFit Gym</title>
         <meta charset="UTF-8"/>
         <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
         <!--script th:src="@{/js/rutinas.js}"></script-->
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>        
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>     
+        
+        
+        <style>
+    :root{
+        --powerfit-orange:#ff6b00;
+        --powerfit-dark:#111111;
+    }
+
+    body{
+        background-color:#f5f5f5;
+    }
+
+    /* Logo */
+    .navbar-brand{
+        color:var(--powerfit-orange) !important;
+    }
+
+    /* Menú */
+    .nav-link{
+        color:var(--powerfit-dark) !important;
+        font-weight:600;
+    }
+
+    .nav-link:hover{
+        color:var(--powerfit-orange) !important;
+    }
+
+    /* Banner promocional */
+    .promo-banner{
+        background-color:var(--powerfit-dark);
+        color:white !important;
+    }
+
+    /* Títulos */
+    h1,h2,h3,h4{
+        color:var(--powerfit-dark);
+    }
+
+    /* Plan Premium */
+    .btn-warning{
+        background-color:var(--powerfit-orange);
+        border-color:var(--powerfit-orange);
+        color:white;
+    }
+
+    .btn-warning:hover{
+        background-color:#e65f00;
+        border-color:#e65f00;
+    }
+
+    /* Footer */
+    footer{
+        background-color:var(--powerfit-dark) !important;
+        color:white !important;
+    }
+
+    /* Sección servicios */
+    .bg-light{
+        background-color:#eeeeee !important;
+    }
+
+    /* Tarjetas */
+    .card{
+        border:none;
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-5px);
+        box-shadow:0 0 20px rgba(255,107,0,.3) !important;
+    }
+</style>
+        
+        
+        
     </head>
 
     <body>
@@ -30,7 +105,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <a href="https://api.whatsapp.com/send?phone=50672686016&text=Enlace%3A%0Ahttps%3A%2F%2Ffb.me%2F7eW6zl07b%0A%0A%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n.&source_url=https%3A%2F%2Ffb.me%2F7eW6zl07b&icebreaker=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n.&app=facebook&entry_point=ctwa_ad&jid=50672686016%40s.whatsapp.net&lid=67689187926058%40lid&have_wm=1&show_ad_attribution=1&source=FB_Ads&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NjI5NDExODgsInBob25lIjoiNTA2NzI2ODYwMTYiLCJ0ZXh0IjoiRW5sYWNlOlxuaHR0cHM6XC9cL2ZiLm1lXC83ZVc2emwwN2JcblxuXHUwMGExSG9sYSEgUXVpZXJvIG1cdTAwZTFzIGluZm9ybWFjaVx1MDBmM24uIiwic291cmNlX3VybCI6Imh0dHBzOlwvXC9mYi5tZVwvN2VXNnpsMDdiIiwiaWNlYnJlYWtlciI6Ilx1MDBhMUhvbGEhIFF1aWVybyBtXHUwMGUxcyBpbmZvcm1hY2lcdTAwZjNuLiIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJjdHdhX2FkIiwiamlkIjoiNTA2NzI2ODYwMTZcdTAwNDBzLndoYXRzYXBwLm5ldCIsImxpZCI6IjY3Njg5MTg3OTI2MDU4XHUwMDQwbGlkIiwiaGF2ZV93bSI6MSwic2hvd19hZF9hdHRyaWJ1dGlvbiI6MSwiYmFubmVyIjp7InRpdGxlIjoiYml6X2NyZWF0aW9uX2RhdGUiLCJmYl9mb2xsb3dlcl9jb3VudCI6IjE5OTQyIiwiYml6X2NyZWF0aW9uX2RhdGUiOjE3NTU1NTMzMjcwMDB9LCJzb3VyY2UiOiJGQl9BZHMiLCJzb3VyY2VfaWQiOiIxMjAyMzM1MDIwMTk1MzAxNDMiLCJjbGllbnRfZmlsdGVycyI6WyJkaXNjbG9zdXJlX2FjY2VwdGVkIl0sInBheWxvYWQiOiJBZmVHRWtJbTZaQTQ0dUNIc2ZsbjJRak4zWFRuc0ZlNFVwWk9SSE5fLUdzTHo0Z0hxUl9XMVVXbmpxSUdFeGFDRmg0MU9qWThxcHpwWklNQTM3ZU9DNWpyVUdMaXlTeF9zNi0xQlhrbnhoOFBxa19kNzJQekk0WjA3Q2NoM3R2UTFiRlBCeVdsZTV4dVJWM3dOVkJralJacUloVUh3MExjRTBIdFFxS0R5ZWlSblBHN01pVDUwUG4wTTg5ZEo1eW45RFhRaWhFNVFpbzdTVXZ5bWdrdlNobWYtam90LUlrdGRiTWtvb3JiRWVMSHJzam96bFBLMXIycHhPNmdpc2Z5LWhlaGF2RkI4ZllfXzJrRGUwUXM2MkYzMElSZTdCYzV4NHB6UWM5dFhaRmJxNHozLTNSTXczbWF6MTJnR2RVblJic0oyejRsanE5cXlvMWZoX1A1cDFUeVhaU0l6bDhsUE96SjRxczV1NnZSaHhScHByWEM1ZmFaaXFOYmdPdm8iLCJzaWduYWxzIjoiYWxsIn0.i_pIKk1fBsl_1LhJsrKMm4N5Al4Z9tepIPbuFUzOvC02e9AsjrKPRBB7KvuNcFqG8bYsdxupytJqqt7ohfo4Hg" class="btn btn-link text-secondary p-0 fs-5" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                     <!-- CENTRO: Logo -->
-                    <a class="navbar-brand mx-auto fw-bold fs-2" th:href="@{/}" style="letter-spacing:-2px;">[[#{app.name}]]</a>
+                    <a class="navbar-brand mx-auto fw-bold fs-2"
+   th:href="@{/}">
+    POWERFIT GYM
+</a>
                     <!-- DERECHA: Íconos interactivos -->
                     <div class="d-flex align-items-center gap-3">
                         <a href="#" class="btn btn-link text-secondary p-0 fs-5" title="Bolsa de compras">
@@ -107,13 +185,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </ul>
                 </div>
             </nav>
-            <div class="container my-2 border-bottom">
-                <div class="text-center text-secondary fw-bold py-2" style="font-size:1rem;">
-                    ENVÍO GRATIS EN TODAS LAS COMPRAS MAYORES A 35.000 COLONES
-                </div>
+            <div class="promo-banner text-center fw-bold py-3">
+    ¡MATRÍCULA GRATIS DURANTE ESTE MES!
+</div>
             </div>
 
         </header>
+        
+        
 
         <section th:fragment="carousel" class="mt-5 mb-5">
             <!--div class="container"-->
@@ -138,18 +217,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     }
                 </style>
 
+                
+                
+                
+                
+                
                 <div id="carouselExample" class="carousel slide custom-carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/img/dimeCollage.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/img/corteizCollage.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/img/collageEmpyre.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
+                    <div class="carousel-item active">
+    <img src="/img/gym1.jpg" class="d-block w-100">
+</div>
+
+<div class="carousel-item">
+    <img src="/img/gym2.jpg" class="d-block w-100">
+</div>
+
+<div class="carousel-item">
+    <img src="/img/gym3.jpg" class="d-block w-100">
+</div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Anterior</span>
@@ -206,88 +290,252 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 }
             </style>
 
-            <div class="container-fluid px-4 py-3">
-                <div class="row gx-4 gy-4">
-                    <!-- CARD 1 -->
-                    <div class="col-md-4">
-                        <div class="card card-category">
-                            <img src="/img/balenciaga3.jpg" class="card-img" alt="Camisas">
-                                <a th:href="@{/camisas/listado}" class="card-overlay-label text-decoration-none">CAMISAS</a>
-                        </div>
-                    </div>
-                    <!-- CARD 2 -->
-                    <div class="col-md-4">
-                        <div class="card card-category">
-                            <img src="/img/bigBoyJeans.jpg" class="card-img" alt="Pantalones">
-                                <a th:href="@{/pantalones/listado}" class="card-overlay-label text-decoration-none">PANTALONES</a>
-                        </div>
-                    </div>
-                    <!-- CARD 3 -->
-                    <div class="col-md-4">
-                        <div class="card card-category">
-                            <img src="/img/suetas.jpg" class="card-img" alt="Suetas">
-                                <a href="/categoria/suetas" class="card-overlay-label text-decoration-none">SUETAS</a>
-                        </div>
-                    </div>
-                    <!-- CARD 4 -->
-                    <div class="col-md-4">
-                        <div class="card card-category">
-                            <img src="/img/gorras.jpg" class="card-img" alt="Gorras">
-                                <a href="/categoria/gorras" class="card-overlay-label text-decoration-none">GORRAS</a>
-                        </div>
-                    </div>
-                    <!-- CARD 5 -->
-                    <div class="col-md-4">
-                        <div class="card card-category">
-                            <img src="/img/shorts.jpg" class="card-img" alt="Shorts">
-                                <a href="/categoria/shorts" class="card-overlay-label text-decoration-none">SHORTS</a>
-                        </div>
-                    </div>
-                    <!-- CARD 6 -->
-                    <div class="col-md-4">
-                        <div class="card card-category">
-                            <img src="/img/trapstarConjunto.jpg" class="card-img" alt="Conjuntos">
-                                <a href="/categoria/conjuntos" class="card-overlay-label text-decoration-none">CONJUNTOS</a>
-                        </div>
-                    </div>
+            
+<section id="planes" class="container py-5">
+    <h2 class="text-center fw-bold mb-5 text-uppercase">
+        Nuestros Planes
+    </h2>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center">
+                    <h3>Básico</h3>
+                    <h1>₡15.000</h1>
+                    <p>Acceso al gimnasio</p>
+                    <p>Horario regular</p>
+                    <button class="btn btn-dark">
+                        Inscribirme
+                    </button>
                 </div>
             </div>
+        </div>
 
-        </section>
-
-
-
-        <footer th:fragment="footer" class="bg-black text-white pt-5 pb-3">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-6 mb-3">
-                        <!-- Logo/NOMBRE DE LA TIENDA -->
-                        <h2 class="fw-bold mb-2">[[#{app.name}]]</h2>
-                        <p class="mb-4">[[#{app.slogan}]]</p>
-                        <!-- ICONOS REDES SOCIALES -->
-                        <div class="d-flex justify-content-center gap-4 mb-2">
-                            <a href="https://www.facebook.com/outletsurfskateoficial" class="text-white fs-3" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://www.instagram.com/outlet_surfskate_heredia/" class="text-white fs-3" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://api.whatsapp.com/send?phone=50672686016&text=Enlace%3A%0Ahttps%3A%2F%2Ffb.me%2F7eW6zl07b%0A%0A%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n.&source_url=https%3A%2F%2Ffb.me%2F7eW6zl07b&icebreaker=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n.&app=facebook&entry_point=ctwa_ad&jid=50672686016%40s.whatsapp.net&lid=67689187926058%40lid&have_wm=1&show_ad_attribution=1&source=FB_Ads&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NjI5NDExODgsInBob25lIjoiNTA2NzI2ODYwMTYiLCJ0ZXh0IjoiRW5sYWNlOlxuaHR0cHM6XC9cL2ZiLm1lXC83ZVc2emwwN2JcblxuXHUwMGExSG9sYSEgUXVpZXJvIG1cdTAwZTFzIGluZm9ybWFjaVx1MDBmM24uIiwic291cmNlX3VybCI6Imh0dHBzOlwvXC9mYi5tZVwvN2VXNnpsMDdiIiwiaWNlYnJlYWtlciI6Ilx1MDBhMUhvbGEhIFF1aWVybyBtXHUwMGUxcyBpbmZvcm1hY2lcdTAwZjNuLiIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJjdHdhX2FkIiwiamlkIjoiNTA2NzI2ODYwMTZcdTAwNDBzLndoYXRzYXBwLm5ldCIsImxpZCI6IjY3Njg5MTg3OTI2MDU4XHUwMDQwbGlkIiwiaGF2ZV93bSI6MSwic2hvd19hZF9hdHRyaWJ1dGlvbiI6MSwiYmFubmVyIjp7InRpdGxlIjoiYml6X2NyZWF0aW9uX2RhdGUiLCJmYl9mb2xsb3dlcl9jb3VudCI6IjE5OTQyIiwiYml6X2NyZWF0aW9uX2RhdGUiOjE3NTU1NTMzMjcwMDB9LCJzb3VyY2UiOiJGQl9BZHMiLCJzb3VyY2VfaWQiOiIxMjAyMzM1MDIwMTk1MzAxNDMiLCJjbGllbnRfZmlsdGVycyI6WyJkaXNjbG9zdXJlX2FjY2VwdGVkIl0sInBheWxvYWQiOiJBZmVHRWtJbTZaQTQ0dUNIc2ZsbjJRak4zWFRuc0ZlNFVwWk9SSE5fLUdzTHo0Z0hxUl9XMVVXbmpxSUdFeGFDRmg0MU9qWThxcHpwWklNQTM3ZU9DNWpyVUdMaXlTeF9zNi0xQlhrbnhoOFBxa19kNzJQekk0WjA3Q2NoM3R2UTFiRlBCeVdsZTV4dVJWM3dOVkJralJacUloVUh3MExjRTBIdFFxS0R5ZWlSblBHN01pVDUwUG4wTTg5ZEo1eW45RFhRaWhFNVFpbzdTVXZ5bWdrdlNobWYtam90LUlrdGRiTWtvb3JiRWVMSHJzam96bFBLMXIycHhPNmdpc2Z5LWhlaGF2RkI4ZllfXzJrRGUwUXM2MkYzMElSZTdCYzV4NHB6UWM5dFhaRmJxNHozLTNSTXczbWF6MTJnR2RVblJic0oyejRsanE5cXlvMWZoX1A1cDFUeVhaU0l6bDhsUE96SjRxczV1NnZSaHhScHByWEM1ZmFaaXFOYmdPdm8iLCJzaWduYWxzIjoiYWxsIn0.i_pIKk1fBsl_1LhJsrKMm4N5Al4Z9tepIPbuFUzOvC02e9AsjrKPRBB7KvuNcFqG8bYsdxupytJqqt7ohfo4Hg" class="text-white fs-3" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
-                        <p class="nav-item"><a class="nav-link text-secondary fw-semibold" th:href="@{/terms/terminos-y-condiciones}">Términos y condiciones</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center text-white-50 small">
-                        [[#{footer.rights}]]
-                    </div>
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center">
+                    <h3>Premium</h3>
+                    <h1>₡25.000</h1>
+                    <p>Clases grupales</p>
+                    <p>Acceso completo</p>
+                    <button class="btn btn-warning">
+                        Inscribirme
+                    </button>
                 </div>
             </div>
-        </footer>
+        </div>
 
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center">
+                    <h3>Elite</h3>
+                    <h1>₡40.000</h1>
+                    <p>Entrenador personal</p>
+                    <p>Plan nutricional</p>
+                    <button class="btn btn-danger">
+                        Inscribirme
+                    </button>
+                </div>
+            </div>
+        </div>
 
+    </div>
+
+</section>
+
+    <section class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-5">
+            Servicios
+        </h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-3">
+                <h4>🏋️ Crossfit</h4>
+                <p>Equipos modernos para todos los niveles.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h4>🤸 Yoga</h4>
+                <p>CrossFit y entrenamiento funcional.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h4>🥗 Nutrición</h4>
+                <p>Asesoría profesional para alcanzar tus objetivos.</p>
+            </div>
+
+            <div class="col-md-3">
+                <h4>👨‍🏫 Entrenadores</h4>
+                <p>Personal certificado y con experiencia.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>        
+      
+           <section class="container py-5">
+
+    <h2 class="text-center fw-bold mb-4">
+        Rutina de Entrenamiento
+    </h2>
+
+    <p class="text-center mb-4">
+        Sigue esta rutina para mejorar tu condición física y fortalecer todo tu cuerpo.
+    </p>
+
+    <div class="d-flex justify-content-center">
+
+        <iframe
+            width="800"
+            height="450"
+            src="https://www.youtube.com/embed/UItWltVZZmE"
+            title="Rutina de Entrenamiento"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section> 
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+     <section class="container py-5">
+
+    <h2 class="text-center fw-bold mb-5">
+        Nuestros Entrenadores
+    </h2>
+
+    <div class="row">
+
+        <div class="col-md-4 text-center">
+            <img src="/img/pesas.jpg"
+                 class="img-fluid rounded-circle mb-3"
+                 width="200">
+            <h4>Carlos Ramírez</h4>
+            <p>Entrenamiento Funcional</p>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <img src="/img/crossfit.jpg"
+                 class="img-fluid rounded-circle mb-3"
+                 width="200">
+            <h4>María López</h4>
+            <p>Nutrición Deportiva</p>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <img src="/img/cardio.jpg"
+                 class="img-fluid rounded-circle mb-3"
+                 width="200">
+            <h4>Andrés Vargas</h4>
+            <p>Musculación Avanzada</p>
+        </div>
+
+    </div>
+
+</section>       
+            
+    <section class="container py-5">
+
+    <h2 class="text-center fw-bold mb-4">
+        Quejas y Sugerencias
+    </h2>
+
+    <p class="text-center text-muted mb-5">
+        Tu opinión es importante para nosotros. Déjanos tus comentarios para seguir mejorando.
+    </p>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8">
+
+            <form>
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">
+                        Nombre Completo
+                    </label>
+                    <input type="text"
+                           class="form-control"
+                           id="nombre"
+                           placeholder="Ingrese su nombre"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">
+                        Correo Electrónico
+                    </label>
+                    <input type="email"
+                           class="form-control"
+                           id="correo"
+                           placeholder="ejemplo@correo.com"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">
+                        Mensaje
+                    </label>
+                    <textarea class="form-control"
+                              id="mensaje"
+                              rows="5"
+                              placeholder="Escriba aquí su queja o sugerencia..."
+                              required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-warning px-4">
+                        Enviar
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>        
+            
+            
+            
+            
+            
+            
+            
+       <footer class="bg-dark text-white text-center py-4">
+
+    <h4>POWERFIT GYM</h4>
+
+    <p>
+        Heredia, Costa Rica
+    </p>
+
+    <p>
+        Tel: 8888-8888
+    </p>
+
+    <p>
+        powerfitgym@gmail.com
+    </p>
+
+</footer>
 
     </body>
 </html>
