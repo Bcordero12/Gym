@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.outlet.controller;
+package com.gym.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +17,9 @@ import org.springframework.context.MessageSource;
 import java.util.Locale;
 
 // Tus servicios y clases del dominio
-import com.outlet.service.CategoriaService;
+import com.gym.service.CategoriaService;
 //import com.outlet.service.FirebaseStorageService;
-import com.outlet.domain.Categoria;
+import com.gym.domain.Categoria;
 
 /**
  *

@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.outlet.service;
+package com.gym.service;
 
-import com.outlet.domain.Categoria;
-import com.outlet.repository.CategoriaRepository;
+import com.gym.domain.Categoria;
+import com.gym.repository.CategoriaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

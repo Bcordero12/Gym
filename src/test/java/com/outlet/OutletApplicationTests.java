@@ -1,10 +1,10 @@
-package com.outlet;
+package com.Gym;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OutletApplicationTests {
+class GymApplication {
 
 	@Test
 	void contextLoads() {

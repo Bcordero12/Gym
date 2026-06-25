@@ -1,4 +1,4 @@
-package com.outlet;
+package com.gym;
 
 import java.util.Locale;
 import org.springframework.context.MessageSource;
