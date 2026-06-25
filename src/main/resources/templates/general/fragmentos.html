@@ -18,76 +18,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>     
         
         
-        <style>
-    :root{
-        --powerfit-orange:#ff6b00;
-        --powerfit-dark:#111111;
-    }
-
-    body{
-        background-color:#f5f5f5;
-    }
-
-    /* Logo */
-    .navbar-brand{
-        color:var(--powerfit-orange) !important;
-    }
-
-    /* Menú */
-    .nav-link{
-        color:var(--powerfit-dark) !important;
-        font-weight:600;
-    }
-
-    .nav-link:hover{
-        color:var(--powerfit-orange) !important;
-    }
-
-    /* Banner promocional */
-    .promo-banner{
-        background-color:var(--powerfit-dark);
-        color:white !important;
-    }
-
-    /* Títulos */
-    h1,h2,h3,h4{
-        color:var(--powerfit-dark);
-    }
-
-    /* Plan Premium */
-    .btn-warning{
-        background-color:var(--powerfit-orange);
-        border-color:var(--powerfit-orange);
-        color:white;
-    }
-
-    .btn-warning:hover{
-        background-color:#e65f00;
-        border-color:#e65f00;
-    }
-
-    /* Footer */
-    footer{
-        background-color:var(--powerfit-dark) !important;
-        color:white !important;
-    }
-
-    /* Sección servicios */
-    .bg-light{
-        background-color:#eeeeee !important;
-    }
-
-    /* Tarjetas */
-    .card{
-        border:none;
-        transition:0.3s;
-    }
-
-    .card:hover{
-        transform:translateY(-5px);
-        box-shadow:0 0 20px rgba(255,107,0,.3) !important;
-    }
-</style>
+      
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -96,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
 
         <header th:fragment="header" class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2">
+            <nav class="navbar navbar-expand-lg border-bottom py-2">
                 <div class="container">
                     <!-- IZQUIERDA: Redes sociales -->
                     <div class="d-flex align-items-center gap-3">
@@ -128,60 +66,47 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <!-- Dropdown MARCAS estilo imagen -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary fw-semibold" href="#" id="dropdownMarcas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                MARCAS
+                                BENEFICIOS
                             </a>
                             <div class="dropdown-menu p-4" aria-labelledby="dropdownMarcas" style="width:400px;max-width:100vw;">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a class="dropdown-item" href="#">Hellstar</a>
-                                        <a class="dropdown-item" href="#">Adidas</a>
-                                        <a class="dropdown-item" href="#">Empyre</a>
-                                        <a class="dropdown-item" href="#">Dime</a>
-                                        <a class="dropdown-item" href="#">Trapstar</a>
-                                        <a class="dropdown-item" href="#">DGK</a>
-                                        <a class="dropdown-item" href="#">Carhartt</a>
+                                        <a class="dropdown-item" href="#">Spa</a>
+                                        <a class="dropdown-item" href="#">Nutricionistas</a>
+                                        <a class="dropdown-item" href="#">Rutinas</a>
+                                        <a class="dropdown-item" href="#">Coaching</a>
+                                        
                                     </div>
                                     <div class="col-4">
-                                        <a class="dropdown-item" href="#">Rhude</a>
-                                        <a class="dropdown-item" href="#">Balenciaga</a>
-                                        <a class="dropdown-item" href="#">Stussy</a>
-                                        <a class="dropdown-item" href="#">Off-White</a>
-                                        <a class="dropdown-item" href="#">Anti Social Social Club</a>
-                                        <a class="dropdown-item" href="#">Palm Angels</a>
-                                        <!--a class="dropdown-item" href="#"></a-->
-                                        <a class="dropdown-item" href="#">Primitive</a>
+                                        <a class="dropdown-item" href="#">Acesoramiento</a>
+                                        <a class="dropdown-item" href="#">Descuentos</a>
+                                        <a class="dropdown-item" href="#">Suplementos</a>
+                                        <a class="dropdown-item" href="#">Atencion contra lesiones</a>
+                                      
                                     </div>
-                                    <div class="col-4">
-                                        <a class="dropdown-item" href="#">Ripndip</a>
-                                        <a class="dropdown-item" href="#">Spitfire</a>
-                                        <a class="dropdown-item" href="#">Thrasher</a>
-                                        <!--a class="dropdown-item" href="#">Puma</a>
-                                        <a class="dropdown-item" href="#">Sant Cruz</a>
-                                        <a class="dropdown-item" href="#">Stance</a>
-                                        <a class="dropdown-item" href="#">Vans</a-->
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </li>
                         <!--li class="nav-item"><a class="nav-link text-secondary fw-semibold" href="/categoria/listado">MARCAS</a></li-->
-                        <li class="nav-item"><a class="nav-link text-secondary fw-semibold" href="#">HOMBRES</a></li>
-                        <li class="nav-item"><a class="nav-link text-secondary fw-semibold" href="#">MUJERES</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#">HORARIOS</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#">INSCRIPCIONES</a></li>
 
                         <!-- Nuevo Dropdown CATEGORÍAS -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary fw-semibold" href="#" id="dropdownCategorias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                CATEGORIAS
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropdownCategorias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                UBICACION
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownCategorias">
-                                <li><a class="dropdown-item" th:href="@{/camisas/listado}">Camisas</a></li>
-                                <li><a class="dropdown-item" th:href="@{/pantalones/listado}">Pantalones</a></li>
-                                <li><a class="dropdown-item" th:href="@{/mantenimiento/manteni}">Gorras</a></li>
-                                <li><a class="dropdown-item" href="#">Suetas</a></li>
-                                <li><a class="dropdown-item" href="#">Shorts</a></li>
+                                <li><a class="dropdown-item" th:href="@{/camisas/listado}">Heredia</a></li>
+                                <li><a class="dropdown-item" th:href="@{/pantalones/listado}">San Jose</a></li>
+                                <li><a class="dropdown-item" th:href="@{/mantenimiento/manteni}">Alajuela</a></li>
+                                <li><a class="dropdown-item" href="#">Cartago</a></li>
+                                <li><a class="dropdown-item" href="#">Guanacaste</a></li>
                                 <!-- Agrega aquí más categorías según lo que tengas -->
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-secondary fw-semibold" href="#">RASTREO DE PEDIDO</a></li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -198,24 +123,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <!--div class="container"-->
             <div id="carouselExample" class="carousel slide custom-carousel w-100">
 
-                <style>
-                    .custom-carousel {
-                        width: 100vw;           /* Todo el viewport, de borde a borde */
-                        max-width: 100%;
-                        height: 450px;          /* O la altura que prefieras */
-                        margin: 0;
-                        border-radius: 0;       /* o el borde que desees */
-                        box-shadow: none;       /* puedes quitar sombreado si quieres */
-                        overflow: hidden;
-                    }
-                    .custom-carousel .carousel-inner,
-                    .custom-carousel .carousel-item,
-                    .custom-carousel img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                </style>
+               
 
                 
                 
@@ -249,45 +157,109 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <section th:fragment="cards" class="mt-5 mb-5">
             <style>
-                .card-category {
-                    border: none;
-                    border-radius: 0;
-                    position: relative;
-                    overflow: hidden;
-                    min-height: 270px;
-                }
-                .card-category img {
-                    object-fit: cover;
-                    width: 100%;
-                    height: 270px;
-                    filter: brightness(0.80);
-                    transition: filter 0.2s;
-                }
-                .card-category:hover img {
-                    filter: brightness(0.68);
-                }
-                .card-overlay-label {
-                    position: absolute;
-                    left: 36px;
-                    bottom: 38px;
-                    background: transparent;
-                    border: 2px solid #FFF;
-                    color: #FFF;
-                    font-weight: 600;
-                    font-size: 1.3rem;
-                    letter-spacing: .03em;
-                    padding: 8px 28px;
-                    border-radius: 3px;
-                    box-shadow: none;
-                    text-align: center;
-                    transition: background 0.2s, color 0.2s;
-                    z-index: 3;
-                }
-                .card-category:hover .card-overlay-label {
-                    background: #fff;
-                    color: #222;
-                    border-color: #fff;
-                }
+             
+:root{
+    --powerfit-orange:#ff6b00;
+    --powerfit-dark:#111111;
+}
+
+/* Fondo general */
+body{
+    background-color:#f5f5f5;
+}
+
+/* Navbar */
+.navbar{
+    background-color:#111111 !important;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:visited{
+    color:#ff6b00 !important;
+    font-weight:bold;
+}
+
+/* Menú */
+.nav-link{
+    color:white !important;
+    font-weight:600;
+}
+
+.nav-link:hover{
+    color:#ff6b00 !important;
+}
+
+/* Banner promocional */
+.promo-banner{
+    background-color:#ff6b00;
+    color:white !important;
+}
+
+/* Títulos */
+h1,h2,h3,h4{
+    color:#111111;
+}
+
+/* Botones */
+.btn-warning{
+    background-color:#ff6b00 !important;
+    border-color:#ff6b00 !important;
+    color:white !important;
+}
+
+.btn-warning:hover{
+    background-color:#e65f00 !important;
+    border-color:#e65f00 !important;
+}
+
+/* Formularios */
+.form-control:focus{
+    border-color:#ff6b00;
+    box-shadow:0 0 0 0.2rem rgba(255,107,0,.25);
+}
+
+/* Footer */
+.powerfit-footer{
+    background-color:#111111;
+    color:white;
+}
+
+/* Sección servicios */
+.bg-light{
+    background-color:#eeeeee !important;
+}
+
+/* Tarjetas */
+.card{
+    border:none;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,107,0,.3);
+}
+
+/* Carrusel */
+.custom-carousel{
+    width:100%;
+    height:450px;
+    overflow:hidden;
+}
+
+.custom-carousel .carousel-inner,
+.custom-carousel .carousel-item,
+.custom-carousel img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+                
+                
+                
+                
             </style>
 
             
@@ -519,7 +491,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             
             
             
-       <footer class="bg-dark text-white text-center py-4">
+     <footer class="bg-dark text-white text-center py-4">
 
     <h4>POWERFIT GYM</h4>
 
